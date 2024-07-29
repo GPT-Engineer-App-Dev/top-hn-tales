@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ExternalLink } from 'lucide-react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const API_URL = 'https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=100';
 
@@ -33,7 +34,10 @@ const Index = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Top 100 Hacker News Stories</h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-bold">Top 100 Hacker News Stories</h1>
+        <ThemeToggle />
+      </div>
       <Input
         type="text"
         placeholder="Search stories..."
